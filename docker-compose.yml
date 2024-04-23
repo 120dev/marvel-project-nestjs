@@ -1,0 +1,17 @@
+services:
+  api:
+    container_name: marvel-api
+    build:
+      context: ./API
+    ports:
+      - "3333:3000"
+    environment:
+      - NODE_ENV=production
+
+  front:
+    container_name: marvel-front
+    build:
+      context: ./FRONT
+    ports:
+      - "8888:80"
+
